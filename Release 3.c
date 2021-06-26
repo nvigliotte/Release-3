@@ -27,9 +27,15 @@ int dayOfWeek;
 //Declare & Initialize choreCost array - defined payouts for each chore
 int choreCost[4] = { 5, 10, 15, 20 };
 
+//File for the register
+FILE *Finance;
+
 //Main function that contains loop and decision for chores
 int main()
 {
+
+	errno_t err;
+	
 	//Prints the welcome message and prompts the user for day of the week
 	printf("Welcome to the Chore-Teller!");
 	printf("\nPlease enter the day of the week (Monday = 1, Sunday = 7): ");
@@ -85,7 +91,19 @@ int main()
 
 	//Output rating and review
 	printf("\nRating is: %d\n", rate1.rating);
-	printf("Our first review!: %s", rate1.feed);
+	printf("Our first review!: %s\n", rate1.feed);
+
+	err = fopen_s(&Finance, "C://Users//Nick V//source//repos//Release 3//Finances.txt", "w+");
+	if (err == 0)
+	{
+		printf("\n ENTRY HAS BEEN LOGGED. THIS IS AN OFFICAL RECORD OF CHORE-TELLER - ALL RIGHTS RESERVED.");
+	}
+	else
+	{
+		printf("ERROR - FILE DOES NOT EXIST.");
+	}
+
+
 
 	//End Function
 	return 0;
