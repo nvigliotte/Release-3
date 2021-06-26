@@ -93,13 +93,16 @@ int main()
 	printf("\nRating is: %d\n", rate1.rating);
 	printf("Our first review!: %s\n", rate1.feed);
 
+	//Open Finances file 
 	err = fopen_s(&Finance, "C://Users//Nick V//source//repos//Release 3//Finances.txt", "w+");
 	if (err == 0)
 	{
+		//Printing the entry log to the logging file
 		printf("\n ENTRY HAS BEEN LOGGED. THIS IS AN OFFICAL RECORD OF CHORE-TELLER - ALL RIGHTS RESERVED.");
 	}
 	else
 	{
+		//Error for missing file
 		printf("ERROR - FILE DOES NOT EXIST.");
 	}
 
