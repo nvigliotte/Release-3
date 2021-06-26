@@ -1,13 +1,13 @@
 /*
   Nicholas Vigliotte
   ITT-310
-  June 12, 2021
+  June 26, 2021
 
  Jeremy Wright
 ------------------------
 
  CHORE-TELLER
-   Ver. 3.0
+   Ver. 4.0
 */
 
 #include <stdio.h>
